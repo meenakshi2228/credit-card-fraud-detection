@@ -23,7 +23,10 @@ from sklearn.metrics import accuracy_score, recall_score, confusion_matrix
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = BASE_DIR
 
-app = Flask(__name__)
+app = Flask(__name__,
+template_folder=BASE_DIR,
+static_folder=BASE_DIR,
+static_url_path="")
 
 # ---------------------------------------------------------------------
 # Load the trained model, scaler and held-out test set ONCE at startup
