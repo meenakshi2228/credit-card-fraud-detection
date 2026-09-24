@@ -21,7 +21,7 @@ from flask import Flask, render_template, request, jsonify
 from sklearn.metrics import accuracy_score, recall_score, confusion_matrix
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_DIR = os.path.join(BASE_DIR, "model")
+MODEL_DIR = BASE_DIR
 
 app = Flask(__name__)
 
