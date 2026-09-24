@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f2f4f8;
+  color: #1f2937;
+}
+
+header {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.threshold-group {
+  background: #eef2ff;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+#threshold-number {
+  margin-top: 8px;
+  width: 100px;
+}
+
+button#predict-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+button#predict-btn:hover {
+  background: #1e40af;
+}
+
+.result-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.result-box.hidden {
+  display: none;
+}
+
+.result-box h3 {
+  margin-top: 0;
+}
+
+#prediction-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+#prediction-label.fraud {
+  color: #dc2626;
+}
+
+#prediction-label.legit {
+  color: #059669;
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.metric-box {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0369a1;
+}
+
+.confusion-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.confusion-matrix th,
+.confusion-matrix td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: center;
+}
+
+.confusion-matrix thead th {
+  background: #f3f4f6;
+}
+
+.confusion-matrix tbody th {
+  background: #f9fafb;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
